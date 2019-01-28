@@ -19,6 +19,13 @@ This is a Java/Maven project using JDK1.8.
 - $ wget http://central.maven.org/maven2/org/apache/avro/avro-tools/1.8.2/avro-tools-1.8.2.jar
 - $ java -jar avro-tools-1.8.2.jar tojson --pretty climbinggym.avro
 
+**Other examples**
+<br/>
+Specific Record<br/>
+https://github.com/scottsappen/AvroSpecificExample<br/>
+Reflected Record<br/>
+https://github.com/scottsappen/AvroReflectedExample
+
 <br/>
 
 *Common compile time errors*
