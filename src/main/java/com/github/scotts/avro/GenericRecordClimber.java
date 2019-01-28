@@ -53,15 +53,15 @@ public class GenericRecordClimber {
         //let's create a file for that record
         final DatumWriter<GenericRecord> datumWriter = new GenericDatumWriter<>(schema);
         try (DataFileWriter<GenericRecord> dataFileWriter = new DataFileWriter<>(datumWriter)) {
-            dataFileWriter.create(climbingGym.getSchema(), new File("climbingGym-generic.avro"));
+            dataFileWriter.create(climbingGym.getSchema(), new File("climbinggym.avro"));
             dataFileWriter.append(climbingGym);
-            System.out.println("Written climbingGym-generic.avro");
+            System.out.println("Created file climbinggym.avro");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         //let's read back that newly generated avro file, create a generic record and thumb through some fields
-        final File file = new File("climbingGym-generic.avro");
+        final File file = new File("climbinggym.avro");
         final DatumReader<GenericRecord> datumReader = new GenericDatumReader<>();
         GenericRecord customerRead;
         try (DataFileReader<GenericRecord> dataFileReader = new DataFileReader<>(file, datumReader)){

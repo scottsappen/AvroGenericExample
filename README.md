@@ -15,6 +15,10 @@ This is a Java/Maven project using JDK1.8.
 - Write out a file using that schema (this will create a .avro file)
 - Read the .avro file
 
+**Reading your Avro object using tools**
+$ wget http://central.maven.org/maven2/org/apache/avro/avro-tools/1.8.2/avro-tools-1.8.2.jar
+$ java -jar avro-tools-1.8.2.jar tojson --pretty climbinggym.avro
+
 <br/>
 
 *Common compile time errors*
