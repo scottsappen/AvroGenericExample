@@ -1,7 +1,11 @@
 # AvroGenericExample
-Simple example that show how you can create an Avro object from a schema
+Simple example that show how you can create an Avro object from a schema.
 
 Example will create a generic record as an example using a rock climbing facility as the entity.
+
+Note: One problem worth calling out about Generic Records is that while they may be convenient and easy,
+there is no compile time checking for data types (e.g. setting a string for a float parameter). So a user could try to write code that does not conform to the schema. 
+With a specific record, you can do data type enforcement at compile time.
 
 This is a Java/Maven project using JDK1.8.
 
