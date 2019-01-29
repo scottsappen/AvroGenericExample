@@ -21,13 +21,6 @@ $ wget http://central.maven.org/maven2/org/apache/avro/avro-tools/1.8.2/avro-too
 $ java -jar avro-tools-1.8.2.jar tojson --pretty climbinggym.avro
 ```
 
-**Other examples**
-<br/>
-Specific Record<br/>
-https://github.com/scottsappen/AvroSpecificExample<br/>
-Reflected Record<br/>
-https://github.com/scottsappen/AvroReflectedExample
-
 **Common compile time errors**
 ```commandline
 Exception in thread "main" org.apache.avro.AvroRuntimeException: Field location type:STRING pos:2 not set and has no default value
@@ -38,4 +31,19 @@ This means you probably did not set a required field
 Exception in thread "main" java.lang.NullPointerException
 ```
 This means you probably did something else wrong, maybe setting a field that does not exist in the schema
+
+**Other examples**
+<br/>
+Specific Record
+<br/>
+https://github.com/scottsappen/AvroSpecificExample
+<br/>
+
+Reflected Record
+<br/>
+https://github.com/scottsappen/AvroReflectedExample
+
+Schema evolution with a Java producer and consumer and Confluent Schema Registry
+<br/>
+https://github.com/scottsappen/AvroProdConsExample
 
