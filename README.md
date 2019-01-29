@@ -16,8 +16,10 @@ This is a Java/Maven project using JDK1.8.
 - Read the .avro file
 
 **Reading your Avro object using tools**
-- $ wget http://central.maven.org/maven2/org/apache/avro/avro-tools/1.8.2/avro-tools-1.8.2.jar
-- $ java -jar avro-tools-1.8.2.jar tojson --pretty climbinggym.avro
+```commandline
+$ wget http://central.maven.org/maven2/org/apache/avro/avro-tools/1.8.2/avro-tools-1.8.2.jar
+$ java -jar avro-tools-1.8.2.jar tojson --pretty climbinggym.avro
+```
 
 **Other examples**
 <br/>
@@ -26,13 +28,14 @@ https://github.com/scottsappen/AvroSpecificExample<br/>
 Reflected Record<br/>
 https://github.com/scottsappen/AvroReflectedExample
 
-<br/>
-
-*Common compile time errors*
-
+**Common compile time errors**
+```commandline
 Exception in thread "main" org.apache.avro.AvroRuntimeException: Field location type:STRING pos:2 not set and has no default value
-- means you probably did not set a required field
+```
+This means you probably did not set a required field
 
+```commandline
 Exception in thread "main" java.lang.NullPointerException
-- means you probably did something else wrong, maybe setting a field that does not exist in the schema
+```
+This means you probably did something else wrong, maybe setting a field that does not exist in the schema
 
